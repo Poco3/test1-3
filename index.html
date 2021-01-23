@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let question;
+
+      function tasuku(work) {
+        console.log("========================");
+        console.log("現在持っているタスク一覧");
+        console.log("========================");
+        work.forEach((i, index) => {
+          console.log(`${index}: ${i}`);
+        });
+      }
+
+      var work = ["掃除", "買い物", "散歩"];
+      tasuku(work);
+
+      while ((question = prompt("タスクを追加してください"))) {
+        if ((question !== "確認", "追加", "削除", "終了")) {
+          alert("新しいタスク追加しました");
+          work.push(question);
+          tasuku(work);
+          prompt(
+            "「確認、追加、削除、終了」の４つのいずれかを入力してください"
+          );
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>
